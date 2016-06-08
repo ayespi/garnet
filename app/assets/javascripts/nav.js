@@ -64,7 +64,16 @@ $(function() {
       }
     }
   });
-  
+  var hash = window.location.hash
+  if(hash){
+    hash = hash.split("-")
+    if(hash[0]){
+      hash = hash[0]
+      $(hash).children().show();
+      scrollTo($(window.location.hash).offset().top - navHeight)
+    }
+  }
+
   function scrollTo(position){
     $('html, body').animate({
       scrollTop: position
