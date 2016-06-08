@@ -3,11 +3,9 @@
   <p><small>By
     <%= link_to observation.admin.username, user_path(observation.admin) %> for
     <%= link_to observation.cohort.name, cohort_path(observation.cohort) %>,
-    <%= link_to "#observations-#{observation.id}" do %>
-    <span title="<%= observation.created_at.strftime("%a %m/%d/%y %r") %>">
+    <a href="#observations-<%= observation.id %>" title="<%= observation.created_at.strftime("%a %m/%d/%y %r") %>">
       <%= time_ago_in_words(observation.created_at) %> ago
-    </span>
-    <% end %>
+    </a>
       <%= link_to "(x)", observation, method: :delete, data: {confirm: "Are you sure?"} %>
     </small></p>
 </div>

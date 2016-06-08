@@ -56,7 +56,7 @@ $(function() {
       if(jumpAnchor === '#top'){
         scrollTo(0);
       }else if(jumpAnchor === window.location.hash){
-        window.location.hash = '';
+        //window.location.hash = '';
       }else{
         $targetEl = $(jumpAnchor);
         window.location.hash = jumpAnchor;

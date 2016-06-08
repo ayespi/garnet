@@ -36,7 +36,12 @@
 
 <% if @observations %>
   <section id="observations" class="fold-box">
-    <h3><a href="#observations" class="fold-trigger"><%= @user.first_name %>'s Observations</a></h3>
+    <h3>
+      <label for='fold-observation'>
+	<%= @user.first_name %>'s Observations
+      </label>
+    </h3>
+    <input id='fold-observation' type='checkbox'>
     <div class="fold-target">
       <%= render @observations %>
       <section>

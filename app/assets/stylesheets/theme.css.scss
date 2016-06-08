@@ -523,7 +523,8 @@ table{
   .fold-target{
     display:none;
   }
-  &:target .fold-target{
+  &:target .fold-target,
+  :checked +  .fold-target{
     display:block;
   }
 }
